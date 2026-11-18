@@ -1,0 +1,17 @@
+section#works.works.container
+  h2.section-title Our Awesome Works
+
+  .filters
+    each cat in filterCategories
+      if cat.checked
+        input.filters__radio(type="radio" name="filter" id=`filter-${cat.id}` checked hidden)
+      else
+        input.filters__radio(type="radio" name="filter" id=`filter-${cat.id}` hidden)
+
+    .filters__chips
+      each cat in filterCategories
+        label.filters__chip(for=`filter-${cat.id}`)= cat.label
+
+    .works-grid
+      each work, i in works
+        +work-card(work)

@@ -1,0 +1,19 @@
+header.header
+  .container.header__container
+    a.logo(href="#")
+      span.logo__mark K
+      | Keepsake
+
+    input#burger-toggle.header__burger-checkbox(type="checkbox" hidden)
+    label.header__burger-btn(for="burger-toggle" aria-label="Toggle Navigation")
+      span
+      span
+      span
+
+    nav.nav
+      ul.nav__list
+        each item in navItems
+          li.nav__item
+            a.nav__link(href=item.href class={'nav__link--active': item.active})= item.label
+      a.header__fav-btn(href="#" aria-label="Favourites")
+        +icon('heart', 18, 16)

@@ -1,7 +1,17 @@
-extends ../layouts/main.pug
+extends ../layouts/main
+
+append meta
+  meta(name="description" content="Keepsake - Digital & Branding Agency crafting beautiful brands, web experiences, and digital products.")
+  meta(property="og:title" content="Keepsake - Digital & Branding Agency")
+  meta(property="og:type" content="website")
 
 block title
-  title Keepsake
+  title Keepsake - Digital & Branding Agency
 
 block content
-  h1 Keepsake
+  include ../components/sections/hero
+  include ../components/sections/works
+  include ../components/sections/cta
+  include ../components/sections/services
+  include ../components/sections/stats
+  include ../components/sections/journal

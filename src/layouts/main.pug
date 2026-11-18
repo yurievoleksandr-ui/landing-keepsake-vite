@@ -1,21 +1,24 @@
+include ../mixins/index
+include ../data/site
+
 doctype html
 html(lang="en")
-    head
-        block meta
-            meta(charset="utf-8")
-            meta(name="viewport" content="width=device-width, initial-scale=1")
-        block title
-            title Vite Pug Template
-        block fonts
-        block main-scripts
-        block styles
-            link(rel="stylesheet" href="/src/styles/main.scss")
-    body
-        block data
-        block header
-            header.page-header header
-        block content
-            main.page-main content
-        block footer
-            footer.page-footer footer
-        block add-scripts
+  head
+    block meta
+      include ../includes/meta
+    block title
+      title Keepsake
+    block styles
+      include ../includes/fonts
+      link(rel="stylesheet" href="/src/styles/main.scss")
+  body
+    block header
+      include ../components/header
+
+    main
+      block content
+
+    block footer
+      include ../components/footer
+
+    block scripts

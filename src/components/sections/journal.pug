@@ -1,0 +1,10 @@
+section#journal.journal.container
+  h2.section-title Latest From Journal
+  .journal-grid
+    each post in journalPosts
+      article.journal-card
+        +picture(post.image, post.alt, 800, 500, true, '(min-width: 768px) 50vw, 100vw')(class="journal-card__img")
+        .journal-card__content
+          span.journal-card__date= post.date
+          h3.journal-card__title= post.title
+          p.journal-card__excerpt= post.excerpt
