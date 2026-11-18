@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+:root {
+  --container-padding: 20px;
+  --section-margin: 50px;
+
+  @include respond-to('md') {
+    --container-padding: 40px;
+    --section-margin: 70px;
+  }
+
+  @include respond-to('xl') {
+    --container-padding: 80px;
+    --section-margin: 90px;
+  }
+}
+
+body {
+  font-family: $font-body;
+  color: $color-text;
+  background-color: $color-white;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section-title {
+  font-family: $font-heading;
+  font-size: clamp(24px, 3vw, 28px);
+  font-weight: 600;
+  color: $color-text-dark;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}

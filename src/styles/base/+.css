@@ -1,3 +1,2 @@
-@import "./index.scss";
+@import "./_base.scss";
 @import "./_reset.scss";
-@import "./_typography.scss";

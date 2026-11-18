@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.works {
+  margin-top: var(--section-margin);
+  margin-bottom: var(--section-margin);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @include respond-to('sm') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to('lg') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

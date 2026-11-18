@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.journal {
+  margin-top: var(--section-margin);
+  margin-bottom: var(--section-margin);
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

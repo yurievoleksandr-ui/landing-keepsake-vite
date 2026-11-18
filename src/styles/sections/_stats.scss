@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.stats {
+  background-color: $color-footer;
+  color: $color-white;
+  padding: 40px 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    text-align: center;
+
+    @include respond-to('md') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__number {
+    display: block;
+    font-family: $font-heading;
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 700;
+    color: $color-teal;
+  }
+
+  &__label {
+    font-size: 13px;
+    color: $color-muted;
+    text-transform: uppercase;
+  }
+}

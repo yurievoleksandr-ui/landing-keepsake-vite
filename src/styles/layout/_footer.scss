@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+.footer {
+  background-color: $color-footer;
+  color: $color-muted;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+
+    @include respond-to('md') {
+      grid-template-columns: 2fr 1fr 2fr;
+    }
+  }
+
+  &__logo {
+    color: $color-white;
+    margin-bottom: 12px;
+  }
+
+  &__about {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__heading {
+    font-family: $font-heading;
+    font-size: 16px;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  &__links {
+    list-style: none;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    color: $color-muted;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $color-footer-border;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 8px;
+
+  &__input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid $color-input-border;
+    background-color: $color-input-bg;
+    color: $color-white;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+}

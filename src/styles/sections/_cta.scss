@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.cta {
+  background-color: $color-bg-light;
+  padding: var(--section-margin) 0;
+  text-align: center;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+
+  &__title {
+    font-family: $font-heading;
+    font-size: clamp(20px, 3vw, 24px);
+    color: $color-text-dark;
+    margin-bottom: 20px;
+  }
+}

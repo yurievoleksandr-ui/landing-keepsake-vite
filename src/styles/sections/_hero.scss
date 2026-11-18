@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.hero {
+  padding-top: 130px;
+  padding-bottom: var(--section-margin);
+  background-color: $color-bg-light;
+  text-align: center;
+
+  &__subtitle {
+    font-family: $font-heading;
+    font-size: 14px;
+    color: $color-accent;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: clamp(32px, 5vw, 46px);
+    font-weight: 600;
+    color: $color-text-dark;
+    max-width: 800px;
+    margin: 0 auto 16px;
+    line-height: 1.2;
+  }
+
+  &__text {
+    font-size: 15px;
+    color: $color-text;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

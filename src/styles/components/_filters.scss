@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+$categories: 'all', 'branding', 'web', 'identity', 'print';
+$filterable: 'branding', 'web', 'identity', 'print';
+
+.filters {
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__chip {
+    padding: 6px 18px;
+    font-family: $font-heading;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: 1px solid $color-border;
+    border-radius: 20px;
+    color: $color-text;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+}
+
+@each $cat in $categories {
+  #filter-#{$cat}:checked ~ .filters__chips label[for='filter-#{$cat}'] {
+    background-color: $color-accent;
+    border-color: $color-accent;
+    color: $color-white;
+  }
+}
+
+@each $cat in $filterable {
+  #filter-#{$cat}:checked ~ .works-grid .work-card:not([data-category='#{$cat}']) {
+    display: none;
+  }
+}
