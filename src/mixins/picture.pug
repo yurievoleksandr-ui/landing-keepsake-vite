@@ -1,9 +1,9 @@
 mixin picture(name, alt = '', width = 800, height = 600, lazy = true)
   picture
-    source(srcset=`/images/${name}.avif`, type='image/avif')
-    source(srcset=`/images/${name}.webp`, type='image/webp')
+    source(srcset=`images/${name}.avif`, type='image/avif')
+    source(srcset=`images/${name}.webp`, type='image/webp')
     img(
-      src=`/images/${name}.jpg`,
+      src=`images/${name}.jpg`,
       alt=alt,
       width=width,
       height=height,
