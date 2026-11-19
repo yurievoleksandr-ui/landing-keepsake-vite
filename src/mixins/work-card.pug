@@ -1,6 +1,6 @@
 mixin work-card(work)
   article.work-card(data-category=work.category)
-    +picture(work.image, work.alt, 800, 632, true)(class="work-card__img")
+    +picture(work.image, work.alt, 800, 632, true).work-card__img
     .work-card__overlay
       span.work-card__plus +
       h3.work-card__title= work.title

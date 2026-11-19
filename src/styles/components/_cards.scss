@@ -15,6 +15,7 @@
 
   &__overlay {
     @include flex-center(column);
+
     position: absolute;
     inset: 0;
     background-color: $color-overlay;

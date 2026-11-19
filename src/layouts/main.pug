@@ -2,7 +2,7 @@ include ../mixins/index
 include ../data/site
 
 doctype html
-html(lang="en")
+html(lang='en')
   head
     block meta
       include ../includes/meta
@@ -10,7 +10,7 @@ html(lang="en")
       title Keepsake
     block styles
       include ../includes/fonts
-      link(rel="stylesheet" href="/src/styles/main.scss")
+      link(rel='stylesheet', href='/src/styles/main.scss')
   body
     block header
       include ../components/header

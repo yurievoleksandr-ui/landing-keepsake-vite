@@ -1,9 +1,12 @@
 extends ../layouts/main
 
-append meta
-  meta(name="description" content="Keepsake - Digital & Branding Agency crafting beautiful brands, web experiences, and digital products.")
-  meta(property="og:title" content="Keepsake - Digital & Branding Agency")
-  meta(property="og:type" content="website")
+block append meta
+  meta(
+    name='description',
+    content='Keepsake - Digital & Branding Agency crafting beautiful brands, web experiences, and digital products.'
+  )
+  meta(property='og:title', content='Keepsake - Digital & Branding Agency')
+  meta(property='og:type', content='website')
 
 block title
   title Keepsake - Digital & Branding Agency

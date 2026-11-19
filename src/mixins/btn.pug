@@ -1,5 +1,5 @@
 mixin btn(text, href = '', modifier = 'primary')
   if href
-    a.btn(class=`btn--${modifier}` href=href)&attributes(attributes)= text
+    a.btn(class=`btn--${modifier}`, href=href)&attributes(attributes)= text
   else
-    button.btn(class=`btn--${modifier}` type="button")&attributes(attributes)= text
+    button.btn(class=`btn--${modifier}`, type='button')&attributes(attributes)= text

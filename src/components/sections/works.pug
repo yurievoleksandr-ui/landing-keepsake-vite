@@ -4,9 +4,9 @@ section#works.works.container
   .filters
     each cat in filterCategories
       if cat.checked
-        input.filters__radio(type="radio" name="filter" id=`filter-${cat.id}` checked hidden)
+        input.filters__radio(type='radio', name='filter', id=`filter-${cat.id}`, checked, hidden)
       else
-        input.filters__radio(type="radio" name="filter" id=`filter-${cat.id}` hidden)
+        input.filters__radio(type='radio', name='filter', id=`filter-${cat.id}`, hidden)
 
     .filters__chips
       each cat in filterCategories
